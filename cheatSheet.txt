@@ -1,0 +1,49 @@
+================================================================================
+                           🎓 GDB WORKSHOP: DEBUGGING IN C
+================================================================================
+
+--------------------------------------------------------------------------------
+PART 1: THE GDB CHEAT SHEET
+--------------------------------------------------------------------------------
+
+1. 🛠️ PREPARATION (Compiling)
+   Before debugging, you MUST compile with debug info enabled and optimizations disabled.
+   
+   Command:  cc -g -O0 filename.c
+   
+   * -g   : Adds debug info (variable names, line numbers).
+   * -O0  : Disables optimizations (so execution matches code lines exactly).
+
+2. 🚀 STARTING GDB
+   Command:  gdb ./a.out
+
+3. 🖥️ VISUAL MODE (Crucial!)
+   This splits the screen so you can see your code while debugging.
+   
+   * layout src       : Turn on Visual Mode.
+   * Ctrl + L         : Refresh Screen (fix if text gets scrambled).
+   * Ctrl + x, a      : Toggle TUI (switch between Visual and Text mode).
+
+4. 🚦 RUNNING & STOPPING
+   * run              : Starts the program.
+   * run arg1         : Starts the program with arguments (e.g., argv[1]).
+   * break main       : Sets a pause point at the start of main().
+   * break 15         : Sets a pause point at line 15.
+   * continue         : Resumes running until the next breakpoint or crash.
+   * quit             : Exits GDB.
+
+5. 👣 STEPPING THROUGH CODE
+   * next (or n)      : Runs the next line. Skips OVER function calls.
+   * step (or s)      : Runs the next line. Steps INTO function calls.
+   * [Enter Key]      : Repeats the last command (useful for stepping fast!).
+
+6. 🧐 INSPECTING VARIABLES
+   * print myVar      : Shows the current value of myVar.
+   * print *ptr       : Shows the value a pointer is pointing to.
+   * display i        : Permanently shows variable 'i' after every step.
+
+7. 💥 CRASH ANALYSIS (Segmentation Faults)
+   * backtrace (bt)   : Shows the call stack (list of active functions).
+   * bt 10            : Shows only the top 10 frames (for infinite recursion).
+   * up               : Moves up the stack (to the caller function).
+   * down             : Moves down the stack.
