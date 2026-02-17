@@ -26,8 +26,11 @@ int calculate_sum(int *arr, int length) {
     
     // BUG 2: Loop condition '<=' instead of '<'
     // This causes an out-of-bounds read at index 5
-    for (int i = 0; i <= length; i++) {
+    int i = 0;
+    while (i <= length) 
+    {
         sum += arr[i];
+        i++;:
     }
     return sum;
 }
