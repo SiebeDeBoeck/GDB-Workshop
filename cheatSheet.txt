@@ -57,3 +57,15 @@ Use this when you know what variable is changing, but not where or why. GDB will
     * rwatch myVar     : Pauses when myVar is read (accessed).
     * info watchpoints : Lists active watchpoints (shows their ID numbers).
     * delete <id>      : Deletes a watchpoint (e.g., delete 3 to remove watchpoint #3).
+
+9. ⌨️ COMMAND LINE SHORTCUTS (GDB TERMINAL NAVIGATION)    
+    * Ctrl + P : Previous command (same as ↑ arrow key).
+    * Ctrl + N : Next command (same as ↓ arrow key).
+    * Ctrl + F : Move cursor Forward one character.
+    * Ctrl + B : Move cursor Backward one character.
+    
+    * Ctrl + A : Move cursor to the beginning of the line.
+    * Ctrl + E : Move cursor to the end of the line.
+    * Ctrl + K : Delete from cursor to end of line.
+    * Ctrl + U : Delete from cursor to beginning of line.
+    * Ctrl + R : Search command history.
