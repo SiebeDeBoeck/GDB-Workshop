@@ -47,3 +47,13 @@ PART 1: THE GDB CHEAT SHEET
    * bt 10            : Shows only the top 10 frames (for infinite recursion).
    * up               : Moves up the stack (to the caller function).
    * down             : Moves down the stack.
+
+8. 🕵️ WATCHPOINTS (Stop on Change)
+
+Use this when you know what variable is changing, but not where or why. GDB will stop exactly when the value changes.
+
+    * watch myVar      : Pauses execution immediately when myVar is written to (value changes).
+    * watch *ptr       : Pauses when the value at the memory address ptr changes.
+    * rwatch myVar     : Pauses when myVar is read (accessed).
+    * info watchpoints : Lists active watchpoints (shows their ID numbers).
+    * delete <id>      : Deletes a watchpoint (e.g., delete 3 to remove watchpoint #3).
